@@ -1,24 +1,9 @@
-# README
+# Kabuni CheatSheet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Cheatsheet Provides the API Endpoints and Usages .
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| API URL              | METHOD        | DATA                  | Response |
+| -------------        |:-------------:| -----:                | -----:   |
+| /users               | POST          | {:email,:password,:name} | User Name with API TOKEN |
+| /users/authenticate  | GET           | Authorization: Token APITOKEN           | Authorized  |
+| /users/regenerate_token | POST      |   {:email,:password,:name}                | NEW APITOKEN|
