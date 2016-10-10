@@ -1,0 +1,29 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  host: localhost
+  database: kabuni-dev
+  pool: 5
+  username: root
+  password: root
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  host: localhost
+  database: kabuni-test
+  pool: 5
+  username: root
+  password: root
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: matrix
+  pool: 5
+  host: localhost
+  username: pguser-name
+  password: pguser-name
+
