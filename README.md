@@ -10,8 +10,14 @@ _Everytime(Except User Creation & Short URL Display) API TOKEN Needs to be passe
 | /users/authenticate  | GET           | Authorization: Token APITOKEN           | Authorized  |
 | /users/regenerate_token| POST      |   {:email,:password,:name}                | NEW APITOKEN|
 | /short_urls| GET      |   N/A               | LIST OF SHORTURLS |
+| /short_urls?page=1| GET      |   N/A               | LIST OF SHORTURLS Paginated : Perpage 10 |
 | /short_urls/:shorty| GET[HTTP]      |  :shorty => Short URL               | Displays the Original URL |
 | /short_urls| POST      |   {:original_url}                | Short URL Details |
 | /short_urls/:shorty | DELETE      |     :shorty => Short URL               | Deletion Status |
 | /:shorty/geo_detail| GET      |  :shorty => Short URL                  | GEO Location Details |
 
+
+# Example using Curl 
+
+`curl -H "Authorization: Token token=fda143031ecc4ccda257169979c54278" http://localhost:3000/users/authenticate
+`
