@@ -2,7 +2,7 @@
 
 This Cheatsheet Provides the API Endpoints and Usages .
 
-_Everytime API TOKEN Needs to be passed in Headers with Key Authorization and Value Token API_TOKEN_
+_Everytime(Except User Creation & Short URL Display) API TOKEN Needs to be passed in Headers with Key Authorization and Value Token API_TOKEN_
 
 | API URL              | METHOD        | DATA                  | Response |
 | -------------        |:-------------:| -----:                | -----:   |
