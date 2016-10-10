@@ -3,7 +3,7 @@ class ShortUrlsController < ApplicationController
 
   # GET /short_urls
   def index
-    @short_urls = @current_user.short_urls
+    @short_urls = paginate @current_user.short_urls, per_page: 5
     render json: @short_urls.as_json(only:[:original_url,:shorty,:visits])
   end
 
@@ -27,15 +27,6 @@ class ShortUrlsController < ApplicationController
       render json: @short_url.errors, status: :unprocessable_entity
     end
   end
-
-  # PATCH/PUT /short_urls/1
-  # def update
-  #   if @short_url.update(short_url_params)
-  #     render json: @short_url
-  #   else
-  #     render json: @short_url.errors, status: :unprocessable_entity
-  #   end
-  # end
 
   # DELETE /short_urls/1
   def destroy
@@ -68,6 +59,7 @@ class ShortUrlsController < ApplicationController
     params.require(:shorty)
   end
 
+  # Fetch GeoLocation Details from freegeoip.net
   def parse_geo_details_for(link)
     geo_hash = {}
     url = "http://freegeoip.net/json/" + URI(link.original_url).host

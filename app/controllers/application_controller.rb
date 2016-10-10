@@ -3,7 +3,6 @@ class ApplicationController < ActionController::API
   # include ActionController::Helpers
   # include ActionController::Cookies
   # include ActionController::ImplicitRender
-
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
   def authenticate
