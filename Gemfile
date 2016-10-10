@@ -12,10 +12,6 @@ gem 'listen'
 gem 'pry'
 gem 'rb-readline'
 
-#Bcrypt for Digesting Password
-
-gem 'bcrypt'
-
 # Use mysql2 as the database for Active Record
 gem 'mysql2', '0.3.20'
 #gem 'sqlite3'
@@ -23,10 +19,10 @@ gem 'mysql2', '0.3.20'
 
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+ gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'
