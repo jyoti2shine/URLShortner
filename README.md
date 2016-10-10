@@ -19,7 +19,8 @@ _Everytime(Except User Creation & Short URL Display) API TOKEN Needs to be passe
 
 # Example using Curl 
 
-`curl -H "Authorization: Token token=fda143031ecc4ccda257169979c54278" http://localhost:3000/users/authenticate`
+`curl -H "Authorization: Token token=fda143031ecc4ccda257169979c54278" http://localhost:3000/users/authenticate
+`
 
 # Example using PostMan
  
