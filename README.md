@@ -1,4 +1,4 @@
-# Kabuni CheatSheet
+# URL Shortner CheatSheet
 
 This Cheatsheet Provides the API Endpoints and Usages .
 
