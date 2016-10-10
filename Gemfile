@@ -15,6 +15,13 @@ gem 'rb-readline'
 gem 'mysql2', '0.3.20'
 #gem 'sqlite3'
 
+group :development, :test do
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+  gem 'shoulda-matchers', '~> 3.1'
+end
 
 
 # To use ActiveModel has_secure_password
