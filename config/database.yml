@@ -17,13 +17,3 @@ test:
   pool: 5
   username: root
   password: root
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: matrix
-  pool: 5
-  host: localhost
-  username: pguser-name
-  password: pguser-name
-
