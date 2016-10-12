@@ -17,8 +17,7 @@ class ShortUrl < ApplicationRecord
     Rails.configuration.base_url + self.shorty
   end
 
-  def increment_counter(ip=nil)
-    self.update_attribute("visits",self.visits+1)
+  def create_short_visit(ip=nil)
     self.short_visits.find_or_create_by(visitor_ip: ip)
   end
 end

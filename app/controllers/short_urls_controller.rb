@@ -11,7 +11,8 @@ class ShortUrlsController < ApplicationController
   def show
     shorty = ShortUrl.find_by(shorty: params.require(:shorty))
     if shorty.present?
-      shorty.increment_counter(request.remote_ip)
+      ShortUrl.increment_counter(:visits,shorty)
+      shorty.create_short_visit(request.remote_ip)
       redirect_to shorty.original_url
     else
       render json: {:error => "not-found"}, :status => 404
