@@ -1,6 +1,6 @@
 class ShortUrl < ApplicationRecord
   belongs_to :user
-  has_one :short_visit
+  has_many :short_visits
 
   validates_presence_of :original_url,:user_id
 
@@ -17,7 +17,8 @@ class ShortUrl < ApplicationRecord
     Rails.configuration.base_url + self.shorty
   end
 
-  def increment_counter
+  def increment_counter(ip=nil)
     self.update_attribute("visits",self.visits+1)
+    self.short_visits.find_or_create_by(visitor_ip: ip)
   end
 end
