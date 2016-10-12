@@ -9,7 +9,7 @@ class UrlSource
 
   def stream_response()
     response = http_call(@source_url)
-    response.code.to_i != 200 ?  {:status => "error" ,:body => "Error getting data at url (response code is #{response.code.to_i.to_s}): "+ @source_url } : {:status => "OK", :body => response.body }
+    response.code.to_i != 200 ?  {:status => "error" ,:body => "Error getting data at url (response code is #{response.code.to_i.to_s}): & body = #{response.body}"+ @source_url } : {:status => "OK", :body => response.body }
   end
 
   private

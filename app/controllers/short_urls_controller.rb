@@ -77,7 +77,7 @@ class ShortUrlsController < ApplicationController
         geo_hash[:original_url] = link.original_url
         geo_hash[:short_url] = link.shorty
       else
-        geo_hash = {:error => "Unable to Process Data from freegeoip for #{visitor.visitor_ip}"}
+        geo_hash = {:error => "Unable to Process Data from freegeoip for #{visitor.visitor_ip}",:body => response[:body]}
       end
       geo_hash
     end
