@@ -7,7 +7,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
 gem 'spring', :group => :development
 #Listen Gem added for Rails-api
-gem 'listen'
+# gem 'listen'
 
 gem 'pry'
 gem 'rb-readline'

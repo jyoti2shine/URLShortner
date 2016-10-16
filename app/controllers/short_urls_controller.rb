@@ -15,7 +15,7 @@ class ShortUrlsController < ApplicationController
       shorty.create_short_visit(request.remote_ip)
       redirect_to shorty.original_url
     else
-      render json: {:error => "not-found"}, :status => 404
+      render json: {:error => "notfound"}, :status => 404
     end
   end
 

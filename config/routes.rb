@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/formatter/index', to: "formatter#index"
+
   resources :short_urls
   resource :users ,only: [:create] do
     post :regenerate_token
