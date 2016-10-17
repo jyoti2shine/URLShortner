@@ -8,7 +8,7 @@ The Challenge
 > to the left and right margins).
 
 
-Example:
+## Example:
 
 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac lorem
 > vitae mi mollis lacinia. Proin in metus accumsan, maximus turpis vel,
@@ -16,7 +16,7 @@ Example:
 > morbi tristique senectus et netus et malesuada fames ac turpis
 > egestas.
 
-Output (line width of 50 characters):
+## Output (line width of 50 characters):
 
 ```sh
 Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -25,4 +25,11 @@ in  metus  accumsan, maximus turpis vel,  volutpat
 leo.  Fusce  sit amet ultrices elit.  Pellentesque
 habitant  morbi  tristique  senectus et  netus  et
 malesuada     fames     ac     turpis     egestas.
+```
+### Usage :
+
+```sh
+$ text = %q(Hello from Text Formatter. Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email. )
+$ TextFormatter.format_ruby_text(text,50,true) # For Formatted Text
+$ TextFormatter.format_ruby_text(text,50,false) # For UnFormatted Text
 ```
